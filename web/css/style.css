@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: DengXian, 'Microsoft YaHei';
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: #DDD;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #666;
+}
+
+#div1 {
+    margin: 50px auto 10px auto;
+    padding: 15px 25px 15px 25px;
+    width: calc(100% - 72px);
+    height: calc(80% - 130px);
+    border: solid 1px #DDD;
+    background-color: #555;
+    border-radius: 10px;
+    text-align: left;
+    line-height: 30px;
+    font-size: 14px;
+    overflow-y: scroll;
+}
+
+#div1::-webkit-scrollbar {
+    width: 0 !important
+}
+
+#txt1 {
+    margin: auto;
+    padding: 5px;
+    width: calc(100% - 32px);
+    line-height: 24px;
+    font-size: 16px;
+    color: #DDD;
+    border: solid 1px #DDD;
+    border-radius: 10px;
+    background-color: #666;
+}
+
+#txt1::-webkit-input-placeholder {
+    color: #CCC;
+}
+
+@media screen and (max-width:800px) {
+    #main {
+        width: 90%;
+        height: 90%;
+        margin: auto;
+        padding: 5px;
+        text-align: center;
+    }
+    
+    h3 {
+        font-size: 14px
+    }
+}
+
+@media screen and (min-width:800px) {
+    #main {
+        width: 800px;
+        height: 100%;
+        margin: auto;
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+.title_you {
+    color: #FFCC66;
+    font-weight: bolder;
+    border-left: solid 5px #FFCC66;
+    padding-left: 10px;
+    line-height: 20px
+}
+
+.title_ai {
+    color: #99EECC;
+    font-weight: bolder;
+    border-left: solid 5px #99EECC;
+    padding-left: 10px;
+    line-height: 20px
+}
+
+.message {
+    color: #E0E0E0;
+    padding-left: 15px
+}
+
+.loading {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 10px;
+
+    animation: rectangle infinite 1s ease-in-out -0.2s;
+
+    background-color: #999;
+}
+
+.loading:before,
+.loading:after {
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    content: "";
+    background-color: #999;
+}
+
+.loading:before {
+    left: -14px;
+    animation: rectangle infinite 1s ease-in-out -0.3s;
+}
+
+.loading:after {
+    right: -14px;
+    animation: rectangle infinite 1s ease-in-out;
+}
+
+@keyframes rectangle {
+
+    0%,
+    80%,
+    100% {
+        height: 20px;
+        box-shadow: 0 0 #999;
+    }
+
+    40% {
+        height: 30px;
+        box-shadow: 0 -20px #999;
+    }
+}
